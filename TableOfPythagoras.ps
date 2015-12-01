@@ -1,0 +1,53 @@
+Program Tabl_MediumMod_harder;           
+var x,z,y,f,d,b,p,k:integer;
+var q:string;
+procedure calc(var z,x,y:integer;var q:string);
+  begin
+    z:=x*y;
+    q:=IntToStr(z);
+    write('',q,'.');
+     if y=10 then
+     writeln
+  end;
+procedure first(var x,y:integer);
+       Begin
+         For x:=1 to 10 do
+           begin
+             for y:=1 to 10 do
+               begin
+                 calc(z,x,y,q);           
+               end;
+           end;
+       end;
+procedure second(var d,b:integer); 
+      Begin
+          While (d>=1) and (d<=10) do
+           begin
+             while (b>=1) and (b<=10) do
+              begin
+                calc(z,d,b,q); 
+              end;
+           end;
+      end;
+procedure third(var p,k:integer);
+      Begin 
+        repeat  
+          Begin 
+            repeat 
+              Begin
+                calc(z,p,k,q);
+              end;
+            until (k<1) and (k>10)
+          end;
+        until (p<1) and (p>10)
+      end;
+Begin
+Writeln('Введите номер способа, 1-For, 2- While,3-until');
+readln(f);
+If f=1
+then first(x,y);
+If f=2
+then second(d,b);
+If f=3 
+then third(p,k);
+End.
